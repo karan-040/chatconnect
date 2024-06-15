@@ -1,0 +1,172 @@
+# Node.js
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Build directories
+dist
+build
+public/build
+
+# Dependency directories
+jspm_packages/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Mac system files
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Production
+build/
+
+# Optional npm cache directory
+.npm
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# SvelteKit build and cache files
+.svelte-kit
+build/
+
+# Storybook files
+.storybook/
+dist-storybook/
+
+# VSCode
+.vscode/
+
+# Serverless directories
+.serverless/
+
+# Temporary files
+*.tmp
+.tmp/
+
+# Next.js build output
+.next/
+
+# Nuxt.js build output
+.nuxt/
+
+# Gatsby files
+.cache/
+public/
+
+# Temporary files
+temp
+*.tmp
+~*
+
+# Static site generators
+out/
+
+# Sapper build / cache
+__sapper__/
+__sapper__/dev/
+__sapper__/build/
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Compiled Object files
+*.obj
+*.pyc
+*.pyo
+*.pyd
+*.pid
+
+# Compiled Dynamic libraries
+*.dynlib
+*.dll
+*.dylib
+
+# Coverage results
+coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Parcel files
+.cache
+.parcel-cache
+
+# Django stuff:
+*.log
+
+# Node-waf configuration
+.lock-wscript
+
+# Python egg stuff
+*.egg
+*.egg-info/
+dist/
+
+# Vagrant stuff:
+.vagrant/
+
+# Bower stuff:
+.bower/
+.bower_cache/
+.bower_components/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.gitignore.io/api/node
