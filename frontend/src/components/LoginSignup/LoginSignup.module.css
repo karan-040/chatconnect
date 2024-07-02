@@ -59,8 +59,7 @@
   transition: 0.2s;
   font-size: 1.1em;
   font-weight: bold;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 20px;
 }
 
 .formToggle button:nth-child(1) {

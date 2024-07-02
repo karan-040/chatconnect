@@ -59,7 +59,7 @@ function LoginSignup() {
         style={{ display: isLogin ? 'none' : 'block' }}
       >
         <form>
-          <input type="email" placeholder="Enter your email" />
+          <input type="email" placeholder="Enter email or phone no." />
           <input type="text" placeholder="Choose username" />
           <input type="password" placeholder="Create password" />
           <button type="button" className={`${styles.btn} ${styles.signup}`}>
