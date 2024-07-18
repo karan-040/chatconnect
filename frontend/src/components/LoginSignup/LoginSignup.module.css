@@ -166,6 +166,25 @@
   box-shadow: 0 4px 8px hsla(210, 2%, 84%, 0.2);
 }
 
+.eye {
+  max-width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 203px;
+}
+.pass {
+  position: relative;
+}
+.message {
+  color: green;
+  margin: 0;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 245px;
+  left: 30px;
+  font-weight: 900;
+}
 @media only screen and (max-width: 500px) {
   .form-modal {
     width: 100%;

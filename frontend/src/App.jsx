@@ -4,7 +4,7 @@ import UploadDP from './components/UploadDP/UploadDP'
 function App() {
   return (
     <>
-      <UploadDP />
+      <LoginSignup />
     </>
   )
 }
