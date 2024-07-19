@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import styles from '../LoginSignup/LoginSignup.module.css'
 import hidden from '../../assets/icons/hidden.png'
 import visible from '../../assets/icons/visible.png'
+import Otp from '../Otp/Otp'
 function LoginSignup() {
   const [isLogin, setIsLogin] = useState(true)
   const [isvisible, setIsvisible] = useState(false)
   const [isavailable, setAvailable] = useState(null)
   const [username, setUsername] = useState('')
   const [debouncedUsername, setDebouncedUsername] = useState(username)
-
+  const [showotp, setShowotp] = useState(false)
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedUsername(username)
@@ -39,6 +40,9 @@ function LoginSignup() {
   const toggleVisible = () => {
     setIsvisible(!isvisible)
   }
+  const handleotpclose = () => {
+    setShowotp(false)
+  }
   return (
     <div className={styles.formModal}>
       <div className={styles.formToggle}>
@@ -48,6 +52,7 @@ function LoginSignup() {
           style={{
             backgroundColor: isLogin ? '#57B846' : '#fff',
             color: isLogin ? '#fff' : '#222',
+            pointerEvents: showotp ? 'none' : 'auto',
           }}
         >
           log in
@@ -69,11 +74,15 @@ function LoginSignup() {
         style={{ display: isLogin ? 'block' : 'none' }}
       >
         <form>
-          <input type="text" placeholder="Enter email or username" />
+          <input
+            type="text"
+            placeholder="Enter email or username"
+            className={styles.inp}
+          />
           <input
             type={isvisible ? 'text' : 'password'}
             placeholder="Enter password"
-            className={styles.pass}
+            className={`${styles.pass} ${styles.inp}`}
           />
           <img
             src={isvisible ? visible : hidden}
@@ -93,14 +102,22 @@ function LoginSignup() {
 
       <div
         id={styles.signupForm}
-        style={{ display: isLogin ? 'none' : 'block' }}
+        style={{
+          display: isLogin ? 'none' : 'block',
+          pointerEvents: showotp ? 'none' : 'auto',
+        }}
       >
         <form>
-          <input type="email" placeholder="Enter email or phone no." />
+          <input
+            type="email"
+            placeholder="Enter email or phone no."
+            className={styles.inp}
+          />
           <input
             type="text"
             placeholder="Choose username"
             onChange={handleChange}
+            className={styles.inp}
           />
           {isavailable != null &&
             (isavailable == true ? (
@@ -110,8 +127,16 @@ function LoginSignup() {
                 not-available
               </span>
             ))}
-          <input type="password" placeholder="Create password" />
-          <button type="button" className={`${styles.btn} ${styles.signup}`}>
+          <input
+            type="password"
+            placeholder="Create password"
+            className={styles.inp}
+          />
+          <button
+            type="button"
+            className={`${styles.btn} ${styles.signup}`}
+            onClick={() => setShowotp(true)}
+          >
             create account
           </button>
           <p>
@@ -121,6 +146,11 @@ function LoginSignup() {
           <hr />
         </form>
       </div>
+      {showotp && (
+        <div className={styles.popup}>
+          <Otp otpdata={handleotpclose} />
+        </div>
+      )}
     </div>
   )
 }

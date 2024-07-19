@@ -1,0 +1,103 @@
+.otpwrapper {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background: #fff;
+  padding: 30px 65px;
+  border-radius: 12px;
+  row-gap: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+  max-width: 400px;
+  min-height: 400px;
+}
+
+.otpicon {
+  height: 65px;
+  width: 65px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.otpheading {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 500;
+  margin-inline: auto;
+}
+
+.inputField {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.inputdata {
+  height: 45px;
+  width: 42px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.125rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.inputdata:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.inputdata::-webkit-inner-spin-button,
+.inputdata::-webkit-outer-spin-button {
+  display: none;
+}
+
+.enter {
+  margin-top: 25px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 9px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #6e93f7;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.enter.active {
+  background: #4070f4;
+  pointer-events: auto;
+}
+
+.enter:hover {
+  background: #0e4bf1;
+}
+
+.cancel {
+  position: absolute;
+  max-width: 25px;
+  top: 5px;
+  right: 5px;
+}
+.cancel:active {
+  transform: scale(0.9);
+}
+.resendButton {
+  margin-inline: auto;
+  background: red;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+.resendButton:active {
+  transform: scale(0.99);
+}
+.timer {
+  margin-inline: auto;
+  font-size: 12px;
+}

@@ -10,7 +10,8 @@
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-.formModal button {
+#loginToggle,
+#signupToggle {
   cursor: pointer;
   position: relative;
   text-transform: capitalize;
@@ -96,13 +97,13 @@
 }
 
 #loginForm button,
-#signupForm button {
+.btn {
   width: 100%;
   margin-top: 0.5em;
   padding: 0.6em;
 }
 
-.formModal input {
+.inp {
   position: relative;
   width: 100%;
   font-size: 1em;
@@ -118,12 +119,12 @@
   color: #000000;
 }
 
-.formModal input:focus,
-.formModal input:active {
+.inp:focus,
+.inp:active {
   transform: scaleX(1.02);
 }
 
-.formModal input::-webkit-input-placeholder {
+.inp::-webkit-input-placeholder {
   color: #222;
 }
 
@@ -170,7 +171,7 @@
   max-width: 30px;
   position: absolute;
   right: 10px;
-  top: 203px;
+  top: 195px;
 }
 .pass {
   position: relative;
@@ -185,6 +186,16 @@
   left: 30px;
   font-weight: 900;
 }
+
+.popup {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  z-index: 100;
+}
+
 @media only screen and (max-width: 500px) {
   .form-modal {
     width: 100%;
