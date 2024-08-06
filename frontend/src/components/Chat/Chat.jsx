@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../Chat/Chat.module.css'
 import { MdOutlineMenu } from 'react-icons/md'
 import { BiSolidMessageRoundedDetail } from 'react-icons/bi'
@@ -17,6 +17,7 @@ import MessageBox from '../MessageBox/MessageBox'
 import user from '../../assets/icons/user.png'
 import Message from '../Message/Message'
 const Chat = () => {
+  const [friend, setFriend] = useState(true) // for choosing friends
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}>
@@ -106,40 +107,58 @@ const Chat = () => {
         </div>
       </div>
       {/* <=======================Messages Section========================> */}
-      <div className={styles.userMessagesSection}>
-        <div className={styles.friendInfo}>
-          <div className={styles.leftSection}>
-            <img src={user} alt="" className={styles.friendDp} />
-            <h3>Username</h3>
+      {friend ? (
+        <div className={styles.userMessagesSection}>
+          <div className={styles.friendInfo}>
+            <div className={styles.leftSection}>
+              <img src={user} alt="" className={styles.friendDp} />
+              <h3>Username</h3>
+            </div>
+            <div className={styles.rightSection}>
+              <span className={styles.iconWrapper}>
+                <IoMdCall />
+              </span>
+              <span className={styles.iconWrapper}>
+                <CiVideoOn />
+              </span>
+            </div>
           </div>
-          <div className={styles.rightSection}>
+          <div className={styles.messagePanel}>
+            <Message message="hello karan" type="sent" />
+            <Message message="hello karan" type="recieved" />
+            <Message message="hello karan" type="sent" />
+            <Message message="hello karan" type="recieved" />
+            <Message message="hello karan" type="sent" />
+            <Message message="hello karan" type="recieved" />
+            <Message message="hello karan" type="sent" />
+            <Message message="hello karan" type="recieved" />
+            <Message message="hello karan" type="sent" />
+            <Message message="hello karan" type="recieved" />
+            <Message message="hello karan" type="sent" />
+            <Message
+              message="hello karan this is the last message"
+              type="recieved"
+            />
+          </div>
+          <div className={styles.messageSendingPanel}>
             <span className={styles.iconWrapper}>
-              <IoMdCall />
+              <FaMicrophone />
             </span>
             <span className={styles.iconWrapper}>
-              <CiVideoOn />
+              <FiPaperclip />
+            </span>
+            <textarea
+              className={styles.messageInput}
+              placeholder="Type a message..."
+            ></textarea>
+            <span className={styles.iconWrapper}>
+              <IoSend />
             </span>
           </div>
         </div>
-        <div className={styles.messagePanel}>
-          <Message />
-        </div>
-        <div className={styles.messageSendingPanel}>
-          <span className={styles.iconWrapper}>
-            <FaMicrophone />
-          </span>
-          <span className={styles.iconWrapper}>
-            <FiPaperclip />
-          </span>
-          <textarea
-            className={styles.messageInput}
-            placeholder="Type a message..."
-          ></textarea>
-          <span className={styles.iconWrapper}>
-            <IoSend />
-          </span>
-        </div>
-      </div>
+      ) : (
+        <div className={styles.banner}>Start Chatting..</div>
+      )}
     </div>
   )
 }

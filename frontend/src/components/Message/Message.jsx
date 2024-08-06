@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from '../Message/Message.module.css'
-const Message = () => {
+const Message = ({ message, type, format }) => {
   return (
-    <div className={styles.MessageContainer}>
-      <span>message</span>
-      <span></span>
+    <div className={type === 'sent' ? styles.sent : styles.received}>
+      <span>{message}</span>
+      <span className={styles.timeStamp}>12.00 AM</span>
     </div>
   )
 }

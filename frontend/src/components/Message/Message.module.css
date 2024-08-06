@@ -3,13 +3,40 @@
   margin: 20px;
   max-width: 300px;
   background-color: red;
-  padding: 5px 20px 15px 3px;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(100% - 10px),
-    10px calc(100% - 10px),
-    0 100%
-  );
+  padding: 0.8rem 2rem 0.8rem 0.4rem;
   text-wrap: wrap;
+  border-radius: 5px;
+  position: relative;
+}
+
+.timeStamp {
+  color: blue;
+  position: absolute;
+  bottom: 1px;
+  right: 3px;
+  font-size: 9px;
+  user-select: none;
+}
+
+/* Message.module.css */
+.sent {
+  background-color: #dcf8c6;
+  color: #000;
+  margin: 10px 20px 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 40%;
+  position: relative;
+  padding-right: 40px;
+}
+
+.received {
+  background-color: #fff;
+  color: #000;
+  margin: 10px auto 10px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 40%;
+  position: relative;
+  padding-right: 40px;
 }

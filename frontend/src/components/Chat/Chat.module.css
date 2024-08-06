@@ -126,10 +126,12 @@
   flex: 1;
   /* background: url('https://media.istockphoto.com/id/1403848173/vector/vector-online-chatting-pattern-online-chatting-seamless-background.jpg?s=612x612&w=0&k=20&c=W3O15mtJiNlJuIgU6S9ZlnzM_yCE27eqwTCfXGYwCSo=');
   background-size: contain; */
-  background-color: aqua;
+  background-color: #1e1e1e;
   overflow-y: auto;
   height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .messageSendingPanel {
   min-height: 60px;
@@ -158,4 +160,32 @@
   overflow: hidden;
   padding-top: 10px;
   padding-left: 3px;
+}
+
+.messagePanel::-webkit-scrollbar {
+  width: 8px;
+}
+.messagePanel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.messagePanel::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+}
+
+.messagePanel::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.messagePanel {
+  scrollbar-width: thin;
+}
+
+.banner {
+  margin-inline: auto;
+  place-content: center;
+  font-size: 6rem;
+  user-select: none;
+  font-weight: 900;
+  font-family: monospace;
 }
