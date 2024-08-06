@@ -1,0 +1,57 @@
+.messageBlock {
+  width: 100%;
+  height: 70px;
+  background-color: #0c1317;
+  border-bottom: 1px solid black;
+  display: flex;
+  color: #fff;
+  gap: 15px;
+  position: relative;
+}
+.messageBlock:hover {
+  background-color: #2a3942;
+}
+.messageBlock:active {
+  background-color: #2f424e;
+}
+.imageSection {
+  margin-left: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dp {
+  max-width: 60px;
+}
+
+.infoSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.infoSection h3 {
+  font-weight: 900;
+}
+.nameDateSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nameDateSection span {
+  font-size: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.newMessage {
+  position: absolute;
+  right: 15px;
+  top: 30px;
+  background-color: green;
+  color: white;
+  font-weight: bolder;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
